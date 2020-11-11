@@ -1,5 +1,6 @@
 package com.example.eatgo.interfaces;
 
+import com.example.eatgo.domain.MenuItem;
 import com.example.eatgo.domain.Restaurant;
 import com.example.eatgo.domain.RestaurantRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +25,8 @@ public class RestaurantController {
     @GetMapping("/restaurants/{id}")
     public Restaurant detail(@PathVariable("id") Long id) {
         Restaurant restaurant = restaurantRepository.findById(id);
+
+        restaurant.addMenuItem(new MenuItem("Kimchi"));
         return restaurant;
     }
 }
