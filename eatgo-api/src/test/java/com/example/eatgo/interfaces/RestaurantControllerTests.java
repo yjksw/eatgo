@@ -1,5 +1,7 @@
 package com.example.eatgo.interfaces;
 
+import com.example.eatgo.domain.MenuItemRepository;
+import com.example.eatgo.domain.MenuItemRepositoryImpl;
 import com.example.eatgo.domain.RestaurantRepository;
 import com.example.eatgo.domain.RestaurantRepositoryImpl;
 import org.junit.jupiter.api.Test;
@@ -25,6 +27,9 @@ class RestaurantControllerTests {
 
     @SpyBean(RestaurantRepositoryImpl.class)
     private RestaurantRepository restaurantRepository;
+
+    @SpyBean(MenuItemRepositoryImpl.class)
+    private MenuItemRepository menuItemRepository;
 
     @Test
     public void list() throws Exception {

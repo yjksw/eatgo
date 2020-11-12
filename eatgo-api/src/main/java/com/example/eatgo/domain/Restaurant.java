@@ -40,4 +40,10 @@ public class Restaurant {
         menuItems.add(menuItem);
         return;
     }
+
+    public void setMenuItems(List<MenuItem> menuItems) {
+        for(MenuItem menuItem: menuItems) {
+            addMenuItem(menuItem);
+        }
+    }
 }
