@@ -1,5 +1,6 @@
 package com.example.eatgo.interfaces;
 
+import com.example.eatgo.application.RestaurantService;
 import com.example.eatgo.domain.MenuItemRepository;
 import com.example.eatgo.domain.MenuItemRepositoryImpl;
 import com.example.eatgo.domain.RestaurantRepository;
@@ -24,6 +25,9 @@ class RestaurantControllerTests {
 
     @Autowired
     private MockMvc mvc;
+
+    @SpyBean(RestaurantService.class)
+    private RestaurantService restaurantService;
 
     @SpyBean(RestaurantRepositoryImpl.class)
     private RestaurantRepository restaurantRepository;
