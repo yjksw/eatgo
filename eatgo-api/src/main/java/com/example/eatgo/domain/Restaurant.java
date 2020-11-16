@@ -6,10 +6,13 @@ import java.util.List;
 public class Restaurant {
 
 
-    private final String name;
-    private final String addr;
-    private final Long id;
+    private String name;
+    private String addr;
+    private Long id;
     private final List<MenuItem> menuItems = new ArrayList<>();
+
+    public Restaurant() {
+    }
 
     public Restaurant(Long id, String name, String addr) {
         this.id = id;
