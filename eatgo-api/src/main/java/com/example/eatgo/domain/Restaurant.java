@@ -20,6 +20,15 @@ public class Restaurant {
         this.addr = addr;
     }
 
+    public Restaurant(String name, String addr) {
+        this.name = name;
+        this.addr = addr;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
     public Long getId() {
         return id;
     }
